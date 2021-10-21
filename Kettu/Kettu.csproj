@@ -5,6 +5,11 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Authors>Beyley</Authors>
         <RepositoryUrl>https://github.com/Beyley/Kettu</RepositoryUrl>
+        <Title>Kettu</Title>
+        <Description>A modular logger designed to be as feature filled as possible</Description>
+        <PackageProjectUrl>https://github.com/Beyley/Kettu</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/Beyley/Kettu/blob/master/LICENSE</PackageLicenseUrl>
+        <RepositoryType>git</RepositoryType>
     </PropertyGroup>
 
 </Project>
