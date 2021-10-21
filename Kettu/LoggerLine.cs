@@ -3,6 +3,8 @@ namespace Kettu {
         public string      LineData;
         public LoggerLevel LoggerLevel;
 
-        public override string ToString() => $"{this.LoggerLevel}: {this.LineData}";
+        public static string LogFormat = "{0}: {1}";
+
+        public override string ToString() => string.Format(LogFormat, this.LoggerLevel, this.LineData);
     }
 }
