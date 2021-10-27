@@ -17,6 +17,22 @@ namespace Kettu.Test {
 
 			Console.ReadLine();
 			
+			Logger.Log("Hello world!", LoggerLevelChannelTest.InstanceImportant);
+
+			Console.ReadLine();
+			
+			Logger.Log("Hello world!", LoggerLevelChannelTest.InstanceUnimportant);
+
+			Console.ReadLine();
+			
+			Logger.Log("Hello world!", LoggerLevelChannelTest.InstanceEvenLessImportant);
+
+			Console.ReadLine();
+			
+			Logger.Log("Hello world!");
+
+			Console.ReadLine();
+			
 			Logger.StopLogging();
 			
 			Logger.Log("Test!");
