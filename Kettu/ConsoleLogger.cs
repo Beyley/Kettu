@@ -8,5 +8,7 @@ namespace Kettu {
         public override void Send(LoggerLine line) {
             Console.WriteLine(line.ToString());
         }
+
+        public override bool AllowMultiple => false;
     }
 }

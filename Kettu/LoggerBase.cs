@@ -38,5 +38,7 @@ namespace Kettu {
         /// Cleans up and removes the object from memory.
         /// </summary>
         public void              Dispose() {}
+
+        public abstract bool AllowMultiple { get; }
     }
 }
