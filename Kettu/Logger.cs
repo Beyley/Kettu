@@ -48,6 +48,7 @@ namespace Kettu {
             await Task.Run(
                 delegate {
                     if (_LoggerLines.Count == 0) return;
+                    if (_Loggers.Count     == 0) return;
 
                     do {
                         if (_LoggerLines.Count == 0) break;
