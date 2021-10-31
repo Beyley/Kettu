@@ -1,9 +1,23 @@
 namespace Kettu {
+    /// <summary>
+    /// A type of information that is logged.
+    /// </summary>
     public class LoggerLevel {
+        /// <summary>
+        /// The name of the logging level.
+        /// </summary>
         public virtual string Name => null;
 
+        /// <summary>
+        /// A channel that is logged *under* the LoggerLevel.
+        /// Think of this as your Info/Warn/Error/Debug channels you would find in other logging systems.
+        /// Attached to the instance.
+        /// </summary>
         public string Channel = null;
 
+        /// <summary>
+        /// The format of how the LoggerLevel is turned into a string. 0 is the name of te logger, and 1 is the channel.
+        /// </summary>
         public static string FullFormat = "{0} [{1}]";
         
         public override string ToString() {
