@@ -11,7 +11,8 @@
         <PackageLicenseUrl>https://github.com/Beyley/Kettu/blob/master/LICENSE</PackageLicenseUrl>
         <RepositoryType>git</RepositoryType>
         <Version>1.1.1</Version>
-        <PackageVersion>1.1.1</PackageVersion>
+        <PackageVersion>1.2</PackageVersion>
+        <AssemblyOriginatorKeyFile>beyley.snk</AssemblyOriginatorKeyFile>
     </PropertyGroup>
 
 </Project>

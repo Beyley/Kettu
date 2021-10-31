@@ -111,7 +111,6 @@ namespace Kettu {
         /// Initializes and adds a logger to the list of loggers.
         /// </summary>
         /// <param name="loggerBase">The logger to add.</param>
-        /// <param name="bypassDuplicateCheck">Whether to bypass the duplicate logger check</param>
         public static void AddLogger(LoggerBase loggerBase) {
             if (!loggerBase.AllowMultiple && _Loggers.Any(x => x.GetType() == loggerBase.GetType())) 
                 return;
