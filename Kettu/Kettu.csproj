@@ -10,8 +10,8 @@
         <PackageProjectUrl>https://github.com/Beyley/Kettu</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/Beyley/Kettu/blob/master/LICENSE</PackageLicenseUrl>
         <RepositoryType>git</RepositoryType>
-        <Version>1.0.1</Version>
-        <PackageVersion>1.1.0</PackageVersion>
+        <Version>1.1.1</Version>
+        <PackageVersion>1.1.1</PackageVersion>
     </PropertyGroup>
 
 </Project>
