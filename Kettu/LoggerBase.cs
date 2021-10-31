@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Kettu {
     /// <summary>
-    /// A method of logging LoggerLines to a file.
+    /// A method of logging LoggerLines to a logger.
     /// </summary>
     public abstract class LoggerBase : IDisposable {
         public LoggerBase(List<LoggerLevel> level = null) {
@@ -33,6 +33,10 @@ namespace Kettu {
         }
         
         public List<LoggerLevel> Level;
+        
+        /// <summary>
+        /// Cleans up and removes the object from memory.
+        /// </summary>
         public void              Dispose() {}
     }
 }
