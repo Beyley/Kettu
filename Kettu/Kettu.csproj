@@ -10,8 +10,8 @@
         <PackageProjectUrl>https://github.com/Beyley/Kettu</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/Beyley/Kettu/blob/master/LICENSE</PackageLicenseUrl>
         <RepositoryType>git</RepositoryType>
-        <Version>1.2.0</Version>
-        <PackageVersion>1.2.0</PackageVersion>
+        <Version>1.2.1</Version>
+        <PackageVersion>1.2.1</PackageVersion>
         <AssemblyOriginatorKeyFile>beyley.snk</AssemblyOriginatorKeyFile>
     </PropertyGroup>
 

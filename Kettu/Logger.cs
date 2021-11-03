@@ -148,15 +148,20 @@ namespace Kettu {
             _LoggerLines.Enqueue(line);
         }
 
+        [Obsolete("You should always provide a LoggerLevel")]
+        public static void Log(string data) {
+            if (data is null) data = "";
+
+            Log(new LoggerLine{LoggerLevel = LoggerLevelUnknown.Instance, LineData = data});
+        }
+
         /// <summary>
         /// Creates and sends a LoggerLine to the queue.
         /// </summary>
         /// <param name="data">The text you want to log.</param>
         /// <param name="level">The level you want to log at. Can be null, but it defaults to "Unknown".</param>
-        public static void Log(string data, LoggerLevel level = null) {
+        public static void Log(string data, LoggerLevel level) {
             if (data is null) data = "";
-            
-            level ??= LoggerLevelUnknown.Instance;
 
             Log(new LoggerLine{LoggerLevel = level, LineData = data});
         }
