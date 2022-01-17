@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Concurrent;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -47,21 +48,27 @@ namespace Kettu {
         public static async Task Update() {
             await Task.Run(
                 delegate {
-                    if (_LoggerLines.Count == 0) return;
-                    if (_Loggers.Count     == 0) return;
+                    lock(_LoggerLines) {
+                        if (_LoggerLines.Count == 0) return;
+                        if (_Loggers.Count     == 0) return;
 
-                    do {
-                        if (_LoggerLines.Count == 0) break;
-                        LoggerLine lineToSend = _LoggerLines.Dequeue();
+                        do {
+                            if (_LoggerLines.Count == 0) break;
+                            bool success = _LoggerLines.TryDequeue(out LoggerLine lineToSend);
 
-                        if (lineToSend.LoggerLevel == null || lineToSend.LineData is null or "") return;
-                        
-                        foreach (LoggerBase logger in _Loggers.Where(
-                            logger => logger.Level.Contains(lineToSend.LoggerLevel) || logger.Level.Contains(LoggerLevelAll.Instance)
-                            )) {
-                            logger.Send(lineToSend);
-                        }
-                    } while (_LoggerLines.Count > 0);
+                            if (!success) {
+                                continue;
+                            }
+
+                            if (lineToSend.LoggerLevel == null || lineToSend.LineData is null or "") return;
+
+                            foreach (LoggerBase logger in _Loggers.Where(
+                                         logger => logger.Level.Contains(lineToSend.LoggerLevel) || logger.Level.Contains(LoggerLevelAll.Instance)
+                                     )) {
+                                logger.Send(lineToSend);
+                            }
+                        } while (_LoggerLines.Count > 0);
+                    }
                 }
             );
         }
@@ -145,7 +152,8 @@ namespace Kettu {
         public static void Log(LoggerLine line) {
             line.LineData = line.LineData.Replace("\r", "");
             line.LineData = line.LineData.Replace("\n", " ");
-            _LoggerLines.Enqueue(line);
+            lock(_LoggerLines)
+                _LoggerLines.Enqueue(line);
         }
 
         [Obsolete("You should always provide a LoggerLevel")]
