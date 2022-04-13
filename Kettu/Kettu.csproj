@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.1</TargetFramework>
+        <TargetFramework>netstandard2.0</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Authors>Beyley</Authors>
         <RepositoryUrl>https://github.com/Beyley/Kettu</RepositoryUrl>
@@ -10,8 +10,8 @@
         <PackageProjectUrl>https://github.com/Beyley/Kettu</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/Beyley/Kettu/blob/master/LICENSE</PackageLicenseUrl>
         <RepositoryType>git</RepositoryType>
-        <Version>1.2.3</Version>
-        <PackageVersion>1.2.3</PackageVersion>
+        <Version>1.2.4</Version>
+        <PackageVersion>1.2.4</PackageVersion>
         <AssemblyOriginatorKeyFile>beyley.snk</AssemblyOriginatorKeyFile>
         <LangVersion>9</LangVersion>
     </PropertyGroup>

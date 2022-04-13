@@ -54,11 +54,7 @@ namespace Kettu {
 
                         do {
                             if (_LoggerLines.Count == 0) break;
-                            bool success = _LoggerLines.TryDequeue(out LoggerLine lineToSend);
-
-                            if (!success) {
-                                continue;
-                            }
+                            LoggerLine lineToSend = _LoggerLines.Dequeue();
 
                             if (lineToSend.LoggerLevel == null || lineToSend.LineData is null or "") return;
 
@@ -110,7 +106,7 @@ namespace Kettu {
         /// <seealso cref="StartLogging"/>
         /// </summary>
         public static async Task StopLogging() {
-            await _Timer.DisposeAsync();
+            _Timer.Dispose();
             TimerStarted = false;
         }
 
