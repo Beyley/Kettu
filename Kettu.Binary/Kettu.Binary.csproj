@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>10</LangVersion>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>Beyley</Authors>
+        <RepositoryUrl>https://github.com/Beyley/Kettu</RepositoryUrl>
+        <Title>Kettu.Binary</Title>
+        <Description>An extension of Kettu to allow logging binary data over a stream</Description>
+        <PackageProjectUrl>https://github.com/Beyley/Kettu</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/Beyley/Kettu/blob/master/LICENSE</PackageLicenseUrl>
+        <RepositoryType>git</RepositoryType>
+        <Version>1.0.0</Version>
+        <PackageVersion>1.0.0</PackageVersion>
+        <AssemblyOriginatorKeyFile>beyley.snk</AssemblyOriginatorKeyFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Kettu\Kettu.csproj" />
+    </ItemGroup>
+
+</Project>
