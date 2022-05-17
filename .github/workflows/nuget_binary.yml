@@ -15,13 +15,13 @@ jobs:
       #   with:
       #     dotnet-version: 3.1.200
 
-      # Publish Kettu
-      - name: publish on version change
-        id: publish_nuget
+      # Publish Kettu.Binary
+      - name: publish on version change binary
+        id: publish_nuget_binary
         uses: rohith/publish-nuget@v2
         with:
           # Filepath of the project to be packaged, relative to root of repository
-          PROJECT_FILE_PATH: Kettu/Kettu.csproj
+          PROJECT_FILE_PATH: Kettu.Binary/Kettu.Binary.csproj
           
           # NuGet package id, used for version detection & defaults to project name
           # PACKAGE_NAME: Core
