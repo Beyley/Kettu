@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kettu", "Kettu\Kettu.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kettu.Test", "Kettu.Test\Kettu.Test.csproj", "{E3615979-C8AF-4CDB-A8D6-BAC948747D96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kettu.ThreadCruncher", "Kettu.ThreadCruncher\Kettu.ThreadCruncher.csproj", "{C5FC5810-A7A4-4C25-8DC5-E93001CC0F7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{E3615979-C8AF-4CDB-A8D6-BAC948747D96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3615979-C8AF-4CDB-A8D6-BAC948747D96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3615979-C8AF-4CDB-A8D6-BAC948747D96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5FC5810-A7A4-4C25-8DC5-E93001CC0F7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5FC5810-A7A4-4C25-8DC5-E93001CC0F7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5FC5810-A7A4-4C25-8DC5-E93001CC0F7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5FC5810-A7A4-4C25-8DC5-E93001CC0F7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
