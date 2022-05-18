@@ -60,8 +60,8 @@ public static class BinarySerializer {
 
 public class DeserializedLoggerLevel {
 	public DateTime TimeStamp;
-	public string[] StackFrames;
-	public string   LineData;
-	public string   LevelChannel;
-	public string   LevelName;
+	public string[] StackFrames  = Array.Empty<string>();
+	public string   LineData     = "";
+	public string   LevelChannel = "";
+	public string   LevelName    = "";
 }
